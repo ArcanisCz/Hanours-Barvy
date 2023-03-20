@@ -4,53 +4,21 @@ import './style.css';
 import ColorSlider from './Components/ColorSlider';
 
 const App = () => {
+  // const [redValue, setRedValue] = useState(0);
+  // const [greenValue, setGreenValue] = useState(0);
+  // const [blueValue, setBlueValue] = useState(0);
 
-
-
+  // const color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+	// colorBox.style.backgroundColor = color;
   return (
     <>
       <div class="color-panel">
 		    <h1>Mixér barev</h1>
-        <ColorSlider  baseColor = "red" colorName="Červná" />
+        <ColorSlider  baseColor = "red" colorName="Červená" />
         <ColorSlider  baseColor = "green" colorName="Zelená" />
         <ColorSlider  baseColor = "blue" colorName="Modrá" />
-
-
-		      <div class="sliders">
-			      <label for="red">Červená</label>
-			<input
-        type="range"
-        class="slider slider--red"
-        id="redSlider"
-        min="0"
-        max="255"
-        value="0"
-      />
-
-			<label for="green">Zelená</label>
-			<input
-        type="range"
-        class="slider slider--green"
-        id="greenSlider"
-        min="0"
-        max="255"
-        value="0"
-      />
-
-			<label for="blue">Modrá</label>
-			<input
-        type="range"
-        class="slider slider--blue"
-        id="blueSlider"
-        min="0"
-        max="255"
-        value="0"
-      />
-		</div>
-		<div class="color-box" id="color-box"></div>
-  </div>
-
-
+		    <div class="color-box" id="color-box"></div>
+      </div>
     </>
 
    
