@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 import ColorSlider from './Components/ColorSlider';
 
 const App = () => {
-  // const [redValue, setRedValue] = useState(0);
-  // const [greenValue, setGreenValue] = useState(0);
-  // const [blueValue, setBlueValue] = useState(0);
+  const [redValue, setRedValue] = useState("255");
+  const [greenValue, setGreenValue] = useState("255");
+  const [blueValue, setBlueValue] = useState("0");
 
-  // const color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-	// colorBox.style.backgroundColor = color;
+const color =`rgb(${redValue},${greenValue},${blueValue})`;
+
+
   return (
     <>
       <div class="color-panel">
@@ -17,7 +18,7 @@ const App = () => {
         <ColorSlider  baseColor = "red" colorName="Červená" />
         <ColorSlider  baseColor = "green" colorName="Zelená" />
         <ColorSlider  baseColor = "blue" colorName="Modrá" />
-		    <div class="color-box" id="color-box"></div>
+		    <div class="color-box" id="color-box" style={{backgroundColor: color}}></div>
       </div>
     </>
 
