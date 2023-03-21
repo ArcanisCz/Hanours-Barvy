@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 const ColorSlider=({baseColor,colorName, onValueChange})=>{
+const  value="0"
+
 let trida=""
 
 		if (baseColor === 'red') {
@@ -22,11 +24,10 @@ let barva=""
         barva = "blueSlider" }
 
 
-
     return(
     <div class="sliders">
         <label for={baseColor}>{colorName}</label>
-        <input 
+        <input  onChange={() => {onValueChange(value);}}
           type="range"
           className={trida}
           id={barva}
