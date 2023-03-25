@@ -2,38 +2,29 @@ import React, { useState } from 'react';
 import './style.css';
 
 const ColorSlider=({baseColor,colorName, onValueChange})=>{
-const  value="0"
+const  value=null
 
-let trida=""
 
-		if (baseColor === 'red') {
-			trida="slider slider--red"
-		} else if (baseColor === 'green') {
-			trida="slider slider--green"
-		} else {
-			trida="slider slider--blue"
-		}
-
-let barva=""
+let id=""
 
     if (baseColor==="red"){
-        barva ="redSlider"
+        id ="redSlider"
     } else if (baseColor==="green"){
-        barva ="greenSlider"
+        id ="greenSlider"
     } else {
-        barva = "blueSlider" }
-
+        id = "blueSlider" }
 
     return(
     <div class="sliders">
         <label for={baseColor}>{colorName}</label>
         <input  onChange={() => {onValueChange(value);}}
           type="range"
-          className={trida}
-          id={barva}
+          className={`slider slider--${baseColor}`}
+          id={id}
           min="0"
           max="255"
-          value="0"
+          value={value}
+          
         />
     </div>
     

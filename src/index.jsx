@@ -9,7 +9,7 @@ const App = () => {
   const [blueValue, setBlueValue] = useState("0");
 
 const color =`rgb(${redValue},${greenValue},${blueValue})`;
-;
+
 
   return (
     <>
