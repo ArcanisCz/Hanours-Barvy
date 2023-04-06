@@ -6,10 +6,9 @@ const ColorSlider=({baseColor,colorName, onValueChange,value})=>{
     return(
         <div class="sliders">
             <label for={baseColor}>{colorName}</label>
-            <input  onChange={() => {onValueChange(value);}}
+            <input onChange={(event) => { onValueChange(event.target.value) }}
                 type="range"
                 className={`slider slider--${baseColor}`}
-                id={ `${baseColor}Slider`}
                 min="0"
                 max="255"
                 value={value}
