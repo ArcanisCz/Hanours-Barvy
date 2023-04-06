@@ -10,7 +10,6 @@ const App = () => {
 
 const color =`rgb(${redValue},${greenValue},${blueValue})`;
 
-
   return (
     <>
       <div class="color-panel">
@@ -21,8 +20,6 @@ const color =`rgb(${redValue},${greenValue},${blueValue})`;
 		    <div class="color-box" id="color-box" style={{backgroundColor: color}}></div>
       </div>
     </>
-
-   
   );
 };
 
